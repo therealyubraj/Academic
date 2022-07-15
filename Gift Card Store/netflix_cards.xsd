@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:netflix="http://www.giftstore.com/netflix_cards" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.giftstore.com/netflix_cards">
+    <xs:import schemaLocation="xhtml5.xsd" namespace="http://www.w3.org/1999/xhtml"/>
+
+    <xs:element name="netflix_cards">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="netflix:store_logo"/>
+                <xs:element ref="netflix:all_cards"/>
+                <xs:element ref="netflix:description"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="all_cards">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="netflix:phy_cards"></xs:element>
+                <xs:element ref="netflix:dig_cards"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="phy_cards">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="netflix:phy_card" minOccurs="1" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="dig_cards">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="netflix:dig_card" minOccurs="1" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="phy_card">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- <xs:element ref="netflix:logo"></xs:element> -->
+                <xs:element ref="netflix:amount"/>
+                <xs:element ref="netflix:cost"/>
+                <xs:element ref="netflix:validity"/>
+                <xs:element ref="netflix:num_of_uses"/>
+                <xs:element ref="netflix:dimensions" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
+            <xs:attribute ref="netflix:phy_id"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="dig_card">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- <xs:element ref="netflix:logo"></xs:element> -->
+                <xs:element ref="netflix:code"></xs:element>
+                <xs:element ref="netflix:amount"/>
+                <xs:element ref="netflix:cost"/>
+                <xs:element ref="netflix:validity"/>
+                <xs:element ref="netflix:num_of_uses"/>
+            </xs:sequence>
+            <xs:attribute ref="netflix:dig_id"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="store_logo" type="xs:string" fixed=""/>
+    <xs:element name="amount">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:decimal">
+                    <xs:attribute ref="netflix:currency" use="required"/>
+                    <xs:attribute ref="netflix:discount" use="optional"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="cost">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:decimal">
+                    <xs:attribute ref="netflix:currency" use="required"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="validity" type="xs:string"></xs:element>
+    <xs:element name="num_of_uses" type="xs:positiveInteger"></xs:element>
+    <xs:element name="dimensions">
+        <xs:complexType>
+            <xs:attribute name="w" type="xs:positiveInteger" use="required"/>
+            <xs:attribute name="h" type="xs:positiveInteger" use="required"/>
+            <xs:attribute name="unit" type="netflix:length_units" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="code">
+        <xs:simpleType >
+            <xs:restriction base="xs:string">
+                <xs:minLength value="12"></xs:minLength>
+                <xs:maxLength value="12"></xs:maxLength>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="description" type="xs:string"></xs:element>
+
+
+    <xs:attribute name="phy_id" type="xs:ID"></xs:attribute>
+    <xs:attribute name="dig_id" type="xs:ID"></xs:attribute>
+    <xs:attribute name="currency">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="$"/>
+                <xs:enumeration value="Rs."/>
+                <xs:enumeration value="IRs."/>
+                <xs:enumeration value="£"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:simpleType name="length_units">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="cm"></xs:enumeration>
+            <xs:enumeration value="in"></xs:enumeration>
+            <xs:enumeration value="m"></xs:enumeration>
+            <xs:enumeration value="ft"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:attribute name="discount" type="xs:positiveInteger"/>
+
+</xs:schema>

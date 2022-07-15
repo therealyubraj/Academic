@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--title of the webpage-->
+    <title>Projects</title>
+
+    <!--meta tags for the webpage-->
+    <meta content="Projects Page" />
+    <meta name="Name" content="Yubraj Sharma Dhakal" />
+    <meta name="keyword" content="Portfolio" />
+    <meta name="keyword" content="Student" />
+    <meta name="keyword" content="Projects" />
+
+    <!--importing external css for canvas and nav bar-->
+    <link rel="stylesheet" href="../css/canvas.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+
+    <!--importing external javascript for canvas background snow-->
+    <script src="../Scripts/snowBack.js"></script>
+
+    <!--internal CSS for this page-->
+    <style>
+        /*style for different tags */
+        body {
+            font-family: comfort;
+            font-size: 18px;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        /* style for image hover */
+        img:hover {
+            transform: scale(1.2);
+        }
+
+        iframe {
+            transform-origin: 0 0;
+            transform: scale(0.7);
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        #main-container {
+            width: 60%;
+            margin: auto;
+            margin-top: 30px;
+        }
+
+        /* style for differenet classes*/
+        .project-container {
+            height: fit-content;
+        }
+
+        .project-description {
+            padding-top: 100px;
+            padding-left: 30px;
+            background-color: transparent;
+        }
+
+        .frame-container {
+            margin: 0;
+            padding: 0;
+            width: auto;
+            height: auto;
+            float: right;
+        }
+
+        .project-button {
+            margin: 0;
+            padding: 0;
+            width: fit-content;
+            height: fit-content;
+            color: white;
+        }
+
+        /*to animate the source code button on hover */
+        .project-button:hover {
+            transform: scale(1.2);
+            border-bottom: 3px solid white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="binary-snow">
+        <!-- show this message if the browser does not support canvas -->
+        Your browser does not support the HTML canvas tag.
+    </canvas>
+
+    <!--navigation bar div-->
+    <div id="nav-bar">
+        <div class="nav-bar-button" onclick="location.href='../index.html'">HOME</div>
+        <div class="nav-bar-button" onclick="location.href='CV.html'">CV</div>
+        <div class="nav-bar-button nav-active" onclick="location.href='projects.html'">PROJECTS</div>
+        <div class="nav-bar-button" onclick="location.href='contact.html'">CONTACT</div>
+    </div>
+
+    <!--main div-->
+    <div id="main-container">
+        <!--this container contains everything for a simgle project-->
+        <div class="project-container">
+            <h1 style="text-align: left;">Firefly Synchronization Simulator</h1>
+            <div style="display:flex;">
+                <!--this container contains description for the project-->
+                <div class="project-description">
+                    <p style="text-align:justify;float:left;padding-right:30px;">
+                        Based on Veritasium's synchronicity video, this is a firefly simulation. They all start with
+                        random frequencies and
+                        adjust according to their closest mates. Slowly, it can be seen that regardless of their
+                        starting frequencies
+                        they start blinking at the same time.
+                    </p><br>
+                    <!--open github source code in a new tab-->
+                    <div class="project-button"
+                        onclick="window.open('https:/\/github.com/therealyubraj/Firefly_Syncrhronous','_blank').focus()">
+                        Source Code</div>
+                </div>
+
+                <!--get iframe from gh-pages and embed here-->
+                <div class="frame-container">
+                    <iframe src="https://therealyubraj.github.io/Firefly_Syncrhronous/" frameborder="0" scrolling="no"
+                        style="width:480px;height:600px;"></iframe>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!--horizontal line-->
+
+        <!--this container is same as the first project's with different content-->
+        <div class="project-container">
+            <h1 style="text-align: right;">Neuro Evolution of Flappy Bird</h1>
+            <div style="display:flex;">
+                <div class="frame-container">
+                    <iframe src="https://therealyubraj.github.io/Flappy-Bird-Evolution/" frameborder="0" scrolling="no"
+                        style="width:640px;height:480px;"></iframe>
+                </div>
+                <div class="project-description">
+                    <p style="text-align:justify;float:left;">
+                        This is a neuroevolution of a NN(Neural Network) which plays the classic game Flappy Bird.
+                    </p><br>
+                    <div class="project-button"
+                        onclick="window.open('https:/\/github.com/therealyubraj/Flappy-Bird-Evolution','_blank').focus()">
+                        Source Code</div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <!--this container is same as the first project's with different content-->
+        <div class="project-container">
+            <h1 style="text-align: left;">Tic-Tac-Toe AI</h1>
+            <div style="display:flex;">
+                <div class="project-description">
+                    <p style="text-align:justify;float:left;padding-right:30px;">
+                        This is a minimax algorithm implementation for Tic-tac-toe AI.
+                    </p><br>
+                    <div class="project-button"
+                        onclick="window.open('https:/\/openprocessing.org/sketch/803783','_blank').focus()">
+                        Play</div>
+                </div>
+                <div class="frame-container">
+                    <img src="../content/projects/images/tic-tac-toe.png"
+                        style="transform-origin: top right;transform: scale(0.5);">
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <!--this container is same as the first project's with different content-->
+        <div class="project-container">
+            <h1 style="text-align: right;">Polynomial Regression using tensorflow.js</h1>
+            <div style="display:flex;">
+                <div class="frame-container">
+                    <iframe src="https://therealyubraj.github.io/PolyRegression/index.html" frameborder="0"
+                        scrolling="no" style="width:640px;height:480px;"></iframe>
+                </div>
+                <div class="project-description">
+                    <p style="text-align:justify;float:left;">
+                        Polynomial regressiong for a given set of points using p5 and tensorflow.js.
+                    </p><br>
+                    <div class="project-button"
+                        onclick="window.open('https:/\/github.com/therealyubraj/PolyRegression','_blank').focus()">
+                        Source Code</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--footer div for social media links and copyright name-->
+    <div id="footer" style="margin-top: 30vh;">
+        <a href="https://www.github.com/therealyubraj" target="_blank">
+            <img src="../content/profiles/github.png" class="social-img" style="border-radius: 0px;">
+        </a>
+
+        <a href="https://www.codingame.com/profile/7f74d384b7e77990fdce282887759f2e6595453" target="_blank">
+            <img src="../content/profiles/codingame.svg" class="social-img" style="width: 35px;height: 35px;border-radius: 0px;">
+        </a>
+
+        <a href="https://www.linkedin.com/in/therealyubraj" target="_blank">
+            <img src="../content/profiles/linkedin.png" class="social-img" style="border-radius: 0px;">
+        </a>
+        <p style="position:absolute;left:100px;font-family: comfort;color:white">
+            &copy; Yubraj Sharma Dhakal
+        </p>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+/* color pallete:
+FEFFFF
+DEF2F1
+3AAFA9
+2B7A78
+17252A
+*/
+
+/* fonts being loaded here: as this css will be loaded for all webpages */
+@font-face {
+    font-family: comfort;
+    src: url(../font/Comfortaa-Regular.ttf);
+}
+
+@font-face {
+    font-family: comfort_b;
+    src: url(../font/Comfortaa-Bold.ttf);
+}
+
+
+/* CSS for navigation bar and buttons here: */
+
+#nav-bar {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding: 10px;
+    border: 0;
+    font-size: 20px;
+    width: fit-content;
+    height: 10vh;
+    border-radius: 10px;
+    font-family: comfort;
+    color: #172517;
+    letter-spacing: 2px;
+}
+
+.nav-bar-button {
+    margin-right: 3vmax;
+    padding: 10px;
+    background-color: transparent;
+    width: fit-content;
+    display: inline-flex;
+    border-radius: 1px;
+}
+
+/* style for button hover and button selection */
+.nav-active,
+.nav-bar-button:hover {
+    transform: scale(1.2);
+    transition: all 0.2s ease-in-out;
+    filter: brightness(120%);
+    color: white;
+    border-bottom: 3px solid white;
+    cursor: pointer;
+}
+
+/* CSS for footer social links here: */
+
+#footer {
+    margin: auto;
+    margin-top: 10vh;
+    width: fit-content;
+    display: flex;
+}
+
+.social-img {
+    width: 40px;
+    height: 40px;
+    padding-right: 30px;
+    transition: all 0.1s ease-in-out;
+}
+
+.social-img:hover {
+    transform-origin: center;
+    transform: scale(1.3);
+}

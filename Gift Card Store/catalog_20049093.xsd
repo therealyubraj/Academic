@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:google="http://www.giftstore.com/google_cards"
+    xmlns:apple="http://www.giftstore.com/apple_cards"
+    xmlns:netflix="http://www.giftstore.com/netflix_cards"
+    xmlns:steam="http://www.giftstore.com/steam_cards"
+    xmlns:xbox="http://www.giftstore.com/xbox_cards"
+    xmlns:amazon="http://www.giftstore.com/amazon_cards"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+    <xs:import schemaLocation="google_cards.xsd" namespace="http://www.giftstore.com/google_cards"/>
+    <xs:import schemaLocation="apple_cards.xsd" namespace="http://www.giftstore.com/apple_cards"/>
+    <xs:import schemaLocation="steam_cards.xsd" namespace="http://www.giftstore.com/steam_cards"/>
+    <xs:import schemaLocation="xbox_cards.xsd" namespace="http://www.giftstore.com/xbox_cards"/>
+    <xs:import schemaLocation="amazon_cards.xsd" namespace="http://www.giftstore.com/amazon_cards"/>
+    <xs:import schemaLocation="netflix_cards.xsd" namespace="http://www.giftstore.com/netflix_cards"/>
+    <xs:import schemaLocation="xhtml5.xsd" namespace="http://www.w3.org/1999/xhtml"/>
+
+    <xs:element name="store">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="header"/>
+                <xs:element ref="xhtml:canvas"/>
+                <xs:element ref="google:google_cards" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="apple:apple_cards" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="netflix:netflix_cards" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="xbox:xbox_cards" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="steam:steam_cards" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="amazon:amazon_cards" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="footer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="header">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="xhtml:script"/>
+                <xs:element ref="xhtml:script"/>
+                <xs:element ref="store_header"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="footer">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="address"/>
+                <xs:element ref="contact"/>
+                <xs:element name="website" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="store_header">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="logo" type="xs:string" fixed=""/>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="store_desc" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="address">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="city" type="xs:string"></xs:element>
+                <xs:element name="state" type="xs:string"></xs:element>
+                <xs:element name="zip" type="xs:string"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="contact">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="email" type="xs:string"></xs:element>
+                <xs:element name="phone" type="xs:string"></xs:element>
+                <xs:element name="mobile" type="xs:string"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

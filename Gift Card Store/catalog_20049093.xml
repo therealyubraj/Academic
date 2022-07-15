@@ -1,0 +1,434 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="styles/site.css" type="text/css"?>
+<?xml-stylesheet href="styles/canvas.css" type="text/css"?>
+
+<store xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml" xsi:noNamespaceSchemaLocation="catalog_20049093.xsd">
+    <header>
+        <xhtml:script type="text/javascript" src="scripts/Point.js"/>
+        <xhtml:script type="text/javascript" src="scripts/background.js"/>
+        <store_header>
+            <logo/>
+            <name>Pandora's Gift Store</name>
+            <store_desc>The best store for gift cards in all of London. We have gift cards for all stores including Apple, Google, Netflix, etc. These cards are perfect to gift someone on special occasions. We even sell digital gift cards for someone special to you who lives on the other side of the world! :) </store_desc>
+        </store_header>
+    </header>
+
+    <xhtml:canvas id="background-anim"/>
+
+    <google:google_cards xmlns:google="http://www.giftstore.com/google_cards">
+        <google:store_logo/>
+        <google:all_cards>
+            <google:phy_cards>
+                <google:phy_card google:phy_id="GooPhy1">
+                    <google:amount google:currency="$" google:discount="15">10</google:amount>
+                    <google:cost google:currency="$">12</google:cost>
+                    <google:validity>2022-09-12</google:validity>
+                    <google:num_of_uses>3</google:num_of_uses>
+                    <google:dimensions w="5" h="10" unit="cm"/>
+                </google:phy_card>
+                <google:phy_card google:phy_id="GooPhy2">
+                    <google:amount google:currency="$">50</google:amount>
+                    <google:cost google:currency="$">55</google:cost>
+                    <google:validity>2022-09-12</google:validity>
+                    <google:num_of_uses>3</google:num_of_uses>
+                </google:phy_card>
+                <google:phy_card google:phy_id="GooPhy3">
+                    <google:amount google:currency="$">120</google:amount>
+                    <google:cost google:currency="$">125</google:cost>
+                    <google:validity>2022-09-12</google:validity>
+                    <google:num_of_uses>3</google:num_of_uses>
+                    <google:dimensions w="5" h="10" unit="cm"></google:dimensions>
+                </google:phy_card>
+                <google:phy_card google:phy_id="GooPhy4">
+                    <google:amount google:currency="$" google:discount="20">500</google:amount>
+                    <google:cost google:currency="$">505</google:cost>
+                    <google:validity>2022-09-12</google:validity>
+                    <google:num_of_uses>3</google:num_of_uses>
+                </google:phy_card>
+            </google:phy_cards>
+            <google:dig_cards>
+                <google:dig_card google:dig_id="GooDig1">
+                    <google:code>121212121212</google:code>
+                    <google:amount google:currency="$">10</google:amount>
+                    <google:cost google:currency="$">12</google:cost>
+                    <google:validity>2022-09-12</google:validity>
+                    <google:num_of_uses>1</google:num_of_uses>
+                </google:dig_card>
+                <google:dig_card google:dig_id="GooDig2">
+                    <google:code>121212121212</google:code>
+                    <google:amount google:currency="$">50</google:amount>
+                    <google:cost google:currency="$">55</google:cost>
+                    <google:validity>2022-09-12</google:validity>
+                    <google:num_of_uses>1</google:num_of_uses>
+                </google:dig_card>
+                <google:dig_card google:dig_id="GooDig3">
+                    <google:code>121212121212</google:code>
+                    <google:amount google:currency="$" google:discount="10">120</google:amount>
+                    <google:cost google:currency="$">125</google:cost>
+                    <google:validity>2022-09-12</google:validity>
+                    <google:num_of_uses>1</google:num_of_uses>
+                </google:dig_card>
+                <google:dig_card google:dig_id="GooDig4">
+                    <google:code>121212121212</google:code>
+                    <google:amount google:currency="$" google:discount="15">500</google:amount>
+                    <google:cost google:currency="$">505</google:cost>
+                    <google:validity>2022-09-12</google:validity>
+                    <google:num_of_uses>1</google:num_of_uses>
+                </google:dig_card>
+            </google:dig_cards>
+        </google:all_cards>
+        <google:description>
+            Google Play gift cards can be used to pay for apps, music, and more.
+        </google:description>
+    </google:google_cards>
+
+    <apple:apple_cards xmlns:apple="http://www.giftstore.com/apple_cards">
+        <apple:store_logo/>
+        <apple:all_cards>
+            <apple:phy_cards>
+                <apple:phy_card apple:phy_id="AppPhy1">
+                    <apple:amount apple:currency="$" apple:discount="15">10</apple:amount>
+                    <apple:cost apple:currency="$">12</apple:cost>
+                    <apple:validity>2022-09-12</apple:validity>
+                    <apple:num_of_uses>3</apple:num_of_uses>
+                    <apple:dimensions w="5" h="10" unit="cm"></apple:dimensions>
+                </apple:phy_card>
+                <apple:phy_card apple:phy_id="AppPhy2">
+                    <apple:amount apple:currency="$">50</apple:amount>
+                    <apple:cost apple:currency="$">55</apple:cost>
+                    <apple:validity>2022-09-12</apple:validity>
+                    <apple:num_of_uses>3</apple:num_of_uses>
+                </apple:phy_card>
+                <apple:phy_card apple:phy_id="AppPhy3">
+                    <apple:amount apple:currency="$">120</apple:amount>
+                    <apple:cost apple:currency="$">125</apple:cost>
+                    <apple:validity>2022-09-12</apple:validity>
+                    <apple:num_of_uses>3</apple:num_of_uses>
+                    <apple:dimensions w="5" h="10" unit="cm"></apple:dimensions>
+                </apple:phy_card>
+                <apple:phy_card apple:phy_id="AppPhy4">
+                    <apple:amount apple:currency="$" apple:discount="20">500</apple:amount>
+                    <apple:cost apple:currency="$">505</apple:cost>
+                    <apple:validity>2022-09-12</apple:validity>
+                    <apple:num_of_uses>3</apple:num_of_uses>
+                </apple:phy_card>
+            </apple:phy_cards>
+            <apple:dig_cards>
+                <apple:dig_card apple:dig_id="AppDig1">
+                    <apple:code>121212121212</apple:code>
+                    <apple:amount apple:currency="$">10</apple:amount>
+                    <apple:cost apple:currency="$">12</apple:cost>
+                    <apple:validity>2022-09-12</apple:validity>
+                    <apple:num_of_uses>1</apple:num_of_uses>
+                </apple:dig_card>
+                <apple:dig_card apple:dig_id="AppDig2">
+                    <apple:code>121212121212</apple:code>
+                    <apple:amount apple:currency="$">50</apple:amount>
+                    <apple:cost apple:currency="$">55</apple:cost>
+                    <apple:validity>2022-09-12</apple:validity>
+                    <apple:num_of_uses>1</apple:num_of_uses>
+                </apple:dig_card>
+                <apple:dig_card apple:dig_id="AppDig3">
+                    <apple:code>121212121212</apple:code>
+                    <apple:amount apple:currency="$" apple:discount="10">120</apple:amount>
+                    <apple:cost apple:currency="$">125</apple:cost>
+                    <apple:validity>2022-09-12</apple:validity>
+                    <apple:num_of_uses>1</apple:num_of_uses>
+                </apple:dig_card>
+                <apple:dig_card apple:dig_id="AppDig4">
+                    <apple:code>121212121212</apple:code>
+                    <apple:amount apple:currency="$" apple:discount="15">500</apple:amount>
+                    <apple:cost apple:currency="$">505</apple:cost>
+                    <apple:validity>2022-09-12</apple:validity>
+                    <apple:num_of_uses>1</apple:num_of_uses>
+                </apple:dig_card>
+            </apple:dig_cards>
+        </apple:all_cards>
+        <apple:description>
+            Apple Gift Cards can be used to pay for apps, music, and more.
+        </apple:description>
+    </apple:apple_cards>
+
+    <netflix:netflix_cards xmlns:netflix="http://www.giftstore.com/netflix_cards">
+        <netflix:store_logo/>
+        <netflix:all_cards>
+            <netflix:phy_cards>
+                <netflix:phy_card netflix:phy_id="NflPhy1">
+                    <netflix:amount netflix:currency="$" netflix:discount="15">10</netflix:amount>
+                    <netflix:cost netflix:currency="$">12</netflix:cost>
+                    <netflix:validity>2022-09-12</netflix:validity>
+                    <netflix:num_of_uses>3</netflix:num_of_uses>
+                    <netflix:dimensions w="5" h="10" unit="cm"></netflix:dimensions>
+                </netflix:phy_card>
+                <netflix:phy_card netflix:phy_id="NflPhy2">
+                    <netflix:amount netflix:currency="$">50</netflix:amount>
+                    <netflix:cost netflix:currency="$">55</netflix:cost>
+                    <netflix:validity>2022-09-12</netflix:validity>
+                    <netflix:num_of_uses>3</netflix:num_of_uses>
+                </netflix:phy_card>
+                <netflix:phy_card netflix:phy_id="NflPhy3">
+                    <netflix:amount netflix:currency="$">120</netflix:amount>
+                    <netflix:cost netflix:currency="$">125</netflix:cost>
+                    <netflix:validity>2022-09-12</netflix:validity>
+                    <netflix:num_of_uses>3</netflix:num_of_uses>
+                    <netflix:dimensions w="5" h="10" unit="cm"></netflix:dimensions>
+                </netflix:phy_card>
+                <netflix:phy_card netflix:phy_id="NflPhy4">
+                    <netflix:amount netflix:currency="$" netflix:discount="20">500</netflix:amount>
+                    <netflix:cost netflix:currency="$">505</netflix:cost>
+                    <netflix:validity>2022-09-12</netflix:validity>
+                    <netflix:num_of_uses>3</netflix:num_of_uses>
+                </netflix:phy_card>
+            </netflix:phy_cards>
+            <netflix:dig_cards>
+                <netflix:dig_card netflix:dig_id="NflDig1">
+                    <netflix:code>121212121212</netflix:code>
+                    <netflix:amount netflix:currency="$">10</netflix:amount>
+                    <netflix:cost netflix:currency="$">12</netflix:cost>
+                    <netflix:validity>2022-09-12</netflix:validity>
+                    <netflix:num_of_uses>1</netflix:num_of_uses>
+                </netflix:dig_card>
+                <netflix:dig_card netflix:dig_id="NflDig2">
+                    <netflix:code>121212121212</netflix:code>
+                    <netflix:amount netflix:currency="$">50</netflix:amount>
+                    <netflix:cost netflix:currency="$">55</netflix:cost>
+                    <netflix:validity>2022-09-12</netflix:validity>
+                    <netflix:num_of_uses>1</netflix:num_of_uses>
+                </netflix:dig_card>
+                <netflix:dig_card netflix:dig_id="NflDig3">
+                    <netflix:code>121212121212</netflix:code>
+                    <netflix:amount netflix:currency="$" netflix:discount="10">120</netflix:amount>
+                    <netflix:cost netflix:currency="$">125</netflix:cost>
+                    <netflix:validity>2022-09-12</netflix:validity>
+                    <netflix:num_of_uses>1</netflix:num_of_uses>
+                </netflix:dig_card>
+                <netflix:dig_card netflix:dig_id="NflDig4">
+                    <netflix:code>121212121212</netflix:code>
+                    <netflix:amount netflix:currency="$" netflix:discount="15">500</netflix:amount>
+                    <netflix:cost netflix:currency="$">505</netflix:cost>
+                    <netflix:validity>2022-09-12</netflix:validity>
+                    <netflix:num_of_uses>1</netflix:num_of_uses>
+                </netflix:dig_card>
+            </netflix:dig_cards>
+        </netflix:all_cards>
+        <netflix:description>
+            Netflix Gift Cards can be used to pay for apps, music, and more.
+        </netflix:description>
+    </netflix:netflix_cards>
+
+    <xbox:xbox_cards xmlns:xbox="http://www.giftstore.com/xbox_cards">
+        <xbox:store_logo/>
+        <xbox:all_cards>
+            <xbox:phy_cards>
+                <xbox:phy_card xbox:phy_id="XbxPhy1">
+                    <xbox:amount xbox:currency="$" xbox:discount="15">10</xbox:amount>
+                    <xbox:cost xbox:currency="$">12</xbox:cost>
+                    <xbox:validity>2022-09-12</xbox:validity>
+                    <xbox:num_of_uses>3</xbox:num_of_uses>
+                    <xbox:dimensions w="5" h="10" unit="cm"></xbox:dimensions>
+                </xbox:phy_card>
+                <xbox:phy_card xbox:phy_id="XbxPhy2">
+                    <xbox:amount xbox:currency="$">50</xbox:amount>
+                    <xbox:cost xbox:currency="$">55</xbox:cost>
+                    <xbox:validity>2022-09-12</xbox:validity>
+                    <xbox:num_of_uses>3</xbox:num_of_uses>
+                </xbox:phy_card>
+                <xbox:phy_card xbox:phy_id="XbxPhy3">
+                    <xbox:amount xbox:currency="$">120</xbox:amount>
+                    <xbox:cost xbox:currency="$">125</xbox:cost>
+                    <xbox:validity>2022-09-12</xbox:validity>
+                    <xbox:num_of_uses>3</xbox:num_of_uses>
+                    <xbox:dimensions w="5" h="10" unit="cm"></xbox:dimensions>
+                </xbox:phy_card>
+                <xbox:phy_card xbox:phy_id="XbxPhy4">
+                    <xbox:amount xbox:currency="$" xbox:discount="20">500</xbox:amount>
+                    <xbox:cost xbox:currency="$">505</xbox:cost>
+                    <xbox:validity>2022-09-12</xbox:validity>
+                    <xbox:num_of_uses>3</xbox:num_of_uses>
+                </xbox:phy_card>
+            </xbox:phy_cards>
+            <xbox:dig_cards>
+                <xbox:dig_card xbox:dig_id="XbxDig1">
+                    <xbox:code>121212121212</xbox:code>
+                    <xbox:amount xbox:currency="$">10</xbox:amount>
+                    <xbox:cost xbox:currency="$">12</xbox:cost>
+                    <xbox:validity>2022-09-12</xbox:validity>
+                    <xbox:num_of_uses>1</xbox:num_of_uses>
+                </xbox:dig_card>
+                <xbox:dig_card xbox:dig_id="XbxDig2">
+                    <xbox:code>121212121212</xbox:code>
+                    <xbox:amount xbox:currency="$">50</xbox:amount>
+                    <xbox:cost xbox:currency="$">55</xbox:cost>
+                    <xbox:validity>2022-09-12</xbox:validity>
+                    <xbox:num_of_uses>1</xbox:num_of_uses>
+                </xbox:dig_card>
+                <xbox:dig_card xbox:dig_id="XbxDig3">
+                    <xbox:code>121212121212</xbox:code>
+                    <xbox:amount xbox:currency="$" xbox:discount="10">120</xbox:amount>
+                    <xbox:cost xbox:currency="$">125</xbox:cost>
+                    <xbox:validity>2022-09-12</xbox:validity>
+                    <xbox:num_of_uses>1</xbox:num_of_uses>
+                </xbox:dig_card>
+                <xbox:dig_card xbox:dig_id="XbxDig4">
+                    <xbox:code>121212121212</xbox:code>
+                    <xbox:amount xbox:currency="$" xbox:discount="15">500</xbox:amount>
+                    <xbox:cost xbox:currency="$">505</xbox:cost>
+                    <xbox:validity>2022-09-12</xbox:validity>
+                    <xbox:num_of_uses>1</xbox:num_of_uses>
+                </xbox:dig_card>
+            </xbox:dig_cards>
+        </xbox:all_cards>
+        <xbox:description>
+            xbox Gift Cards can be used to pay for apps, music, and more.
+        </xbox:description>
+    </xbox:xbox_cards>
+
+    <steam:steam_cards xmlns:steam="http://www.giftstore.com/steam_cards">
+        <steam:store_logo/>
+        <steam:all_cards>
+            <steam:phy_cards>
+                <steam:phy_card steam:phy_id="StmPhy1">
+                    <steam:amount steam:currency="$" steam:discount="15">10</steam:amount>
+                    <steam:cost steam:currency="$">12</steam:cost>
+                    <steam:validity>2022-09-12</steam:validity>
+                    <steam:num_of_uses>3</steam:num_of_uses>
+                    <steam:dimensions w="5" h="10" unit="cm"></steam:dimensions>
+                </steam:phy_card>
+                <steam:phy_card steam:phy_id="StmPhy2">
+                    <steam:amount steam:currency="$">50</steam:amount>
+                    <steam:cost steam:currency="$">55</steam:cost>
+                    <steam:validity>2022-09-12</steam:validity>
+                    <steam:num_of_uses>3</steam:num_of_uses>
+                </steam:phy_card>
+                <steam:phy_card steam:phy_id="StmPhy3">
+                    <steam:amount steam:currency="$">120</steam:amount>
+                    <steam:cost steam:currency="$">125</steam:cost>
+                    <steam:validity>2022-09-12</steam:validity>
+                    <steam:num_of_uses>3</steam:num_of_uses>
+                    <steam:dimensions w="5" h="10" unit="cm"></steam:dimensions>
+                </steam:phy_card>
+                <steam:phy_card steam:phy_id="StmPhy4">
+                    <steam:amount steam:currency="$" steam:discount="20">500</steam:amount>
+                    <steam:cost steam:currency="$">505</steam:cost>
+                    <steam:validity>2022-09-12</steam:validity>
+                    <steam:num_of_uses>3</steam:num_of_uses>
+                </steam:phy_card>
+            </steam:phy_cards>
+            <steam:dig_cards>
+                <steam:dig_card steam:dig_id="StmDig1">
+                    <steam:code>121212121212</steam:code>
+                    <steam:amount steam:currency="$">10</steam:amount>
+                    <steam:cost steam:currency="$">12</steam:cost>
+                    <steam:validity>2022-09-12</steam:validity>
+                    <steam:num_of_uses>1</steam:num_of_uses>
+                </steam:dig_card>
+                <steam:dig_card steam:dig_id="StmDig2">
+                    <steam:code>121212121212</steam:code>
+                    <steam:amount steam:currency="$">50</steam:amount>
+                    <steam:cost steam:currency="$">55</steam:cost>
+                    <steam:validity>2022-09-12</steam:validity>
+                    <steam:num_of_uses>1</steam:num_of_uses>
+                </steam:dig_card>
+                <steam:dig_card steam:dig_id="StmDig3">
+                    <steam:code>121212121212</steam:code>
+                    <steam:amount steam:currency="$" steam:discount="10">120</steam:amount>
+                    <steam:cost steam:currency="$">125</steam:cost>
+                    <steam:validity>2022-09-12</steam:validity>
+                    <steam:num_of_uses>1</steam:num_of_uses>
+                </steam:dig_card>
+                <steam:dig_card steam:dig_id="StmDig4">
+                    <steam:code>121212121212</steam:code>
+                    <steam:amount steam:currency="$" steam:discount="15">500</steam:amount>
+                    <steam:cost steam:currency="$">505</steam:cost>
+                    <steam:validity>2022-09-12</steam:validity>
+                    <steam:num_of_uses>1</steam:num_of_uses>
+                </steam:dig_card>
+            </steam:dig_cards>
+        </steam:all_cards>
+        <steam:description>
+            steam Gift Cards can be used to pay for apps, music, and more.
+        </steam:description>
+    </steam:steam_cards>
+
+    <amazon:amazon_cards xmlns:amazon="http://www.giftstore.com/amazon_cards">
+        <amazon:store_logo/>
+        <amazon:all_cards>
+            <amazon:phy_cards>
+                <amazon:phy_card amazon:phy_id="AmzPhy1">
+                    <amazon:amount amazon:currency="$" amazon:discount="15">10</amazon:amount>
+                    <amazon:cost amazon:currency="$">12</amazon:cost>
+                    <amazon:validity>2022-09-12</amazon:validity>
+                    <amazon:num_of_uses>3</amazon:num_of_uses>
+                    <amazon:dimensions w="5" h="10" unit="cm"></amazon:dimensions>
+                </amazon:phy_card>
+                <amazon:phy_card amazon:phy_id="AmzPhy2">
+                    <amazon:amount amazon:currency="$">50</amazon:amount>
+                    <amazon:cost amazon:currency="$">55</amazon:cost>
+                    <amazon:validity>2022-09-12</amazon:validity>
+                    <amazon:num_of_uses>3</amazon:num_of_uses>
+                </amazon:phy_card>
+                <amazon:phy_card amazon:phy_id="AmzPhy3">
+                    <amazon:amount amazon:currency="$">120</amazon:amount>
+                    <amazon:cost amazon:currency="$">125</amazon:cost>
+                    <amazon:validity>2022-09-12</amazon:validity>
+                    <amazon:num_of_uses>3</amazon:num_of_uses>
+                    <amazon:dimensions w="5" h="10" unit="cm"></amazon:dimensions>
+                </amazon:phy_card>
+                <amazon:phy_card amazon:phy_id="AmzPhy4">
+                    <amazon:amount amazon:currency="$" amazon:discount="20">500</amazon:amount>
+                    <amazon:cost amazon:currency="$">505</amazon:cost>
+                    <amazon:validity>2022-09-12</amazon:validity>
+                    <amazon:num_of_uses>3</amazon:num_of_uses>
+                </amazon:phy_card>
+            </amazon:phy_cards>
+            <amazon:dig_cards>
+                <amazon:dig_card amazon:dig_id="AmzDig1">
+                    <amazon:code>121212121212</amazon:code>
+                    <amazon:amount amazon:currency="$">10</amazon:amount>
+                    <amazon:cost amazon:currency="$">12</amazon:cost>
+                    <amazon:validity>2022-09-12</amazon:validity>
+                    <amazon:num_of_uses>1</amazon:num_of_uses>
+                </amazon:dig_card>
+                <amazon:dig_card amazon:dig_id="AmzDig2">
+                    <amazon:code>121212121212</amazon:code>
+                    <amazon:amount amazon:currency="$">50</amazon:amount>
+                    <amazon:cost amazon:currency="$">55</amazon:cost>
+                    <amazon:validity>2022-09-12</amazon:validity>
+                    <amazon:num_of_uses>1</amazon:num_of_uses>
+                </amazon:dig_card>
+                <amazon:dig_card amazon:dig_id="AmzDig3">
+                    <amazon:code>121212121212</amazon:code>
+                    <amazon:amount amazon:currency="$" amazon:discount="10">120</amazon:amount>
+                    <amazon:cost amazon:currency="$">125</amazon:cost>
+                    <amazon:validity>2022-09-12</amazon:validity>
+                    <amazon:num_of_uses>1</amazon:num_of_uses>
+                </amazon:dig_card>
+                <amazon:dig_card amazon:dig_id="AmzDig4">
+                    <amazon:code>121212121212</amazon:code>
+                    <amazon:amount amazon:currency="$" amazon:discount="15">500</amazon:amount>
+                    <amazon:cost amazon:currency="$">505</amazon:cost>
+                    <amazon:validity>2022-09-12</amazon:validity>
+                    <amazon:num_of_uses>1</amazon:num_of_uses>
+                </amazon:dig_card>
+            </amazon:dig_cards>
+        </amazon:all_cards>
+        <amazon:description>
+            amazon Gift Cards can be used to pay for apps, music, and more.
+        </amazon:description>
+    </amazon:amazon_cards>
+
+    <footer>
+        <address>
+            <city>London</city>
+            <state>United Kingdom</state>
+            <zip>52111</zip>
+        </address>
+        <contact>
+            <email>info@pandoragiftstore.com</email>
+            <phone>+44 20 7234 3456</phone>
+            <mobile>+44 79 7577 7666</mobile>
+        </contact>
+        <website> https://pandoragiftshop.com </website>
+    </footer>
+</store>

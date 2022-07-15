@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=Course
+comment0.text=\r\nThis\ is\ the\ Course\ class.\ This\ is\ the\ parent\ class\ for\ other\ classes.\ This\ contains\ all\ base\ methods\ and\ instance\ variables\ that\r\nothers\ can\ inherit.\r\n
+comment1.params=courseId\ courseName\ duration
+comment1.target=Course(java.lang.String,\ java.lang.String,\ int)
+comment10.params=
+comment10.target=void\ displayCourse()
+comment2.params=
+comment2.target=java.lang.String\ getCourseId()
+comment3.params=courseId
+comment3.target=void\ setCourseId(java.lang.String)
+comment4.params=
+comment4.target=java.lang.String\ getCourseName()
+comment5.params=courseName
+comment5.target=void\ setCourseName(java.lang.String)
+comment6.params=
+comment6.target=java.lang.String\ getCourseLeader()
+comment7.params=courseLeader
+comment7.target=void\ setCourseLeader(java.lang.String)
+comment8.params=
+comment8.target=int\ getDuration()
+comment9.params=duration
+comment9.target=void\ setDuration(int)
+numComments=11

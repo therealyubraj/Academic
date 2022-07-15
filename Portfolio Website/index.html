@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--title of the webpage-->
+    <title>Home | Welcome</title>
+
+    <!--meta tags for the webpage-->
+    <meta content="Home Page" />
+    <meta name="Name" content="Yubraj Sharma Dhakal" />
+    <meta name="keyword" content="Portfolio" />
+    <meta name="keyword" content="Student" />
+
+    <!--importing external css for canvas and nav bar-->
+    <link rel="stylesheet" href="css/canvas.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+
+    <!--importing external javascript for canvas background snow-->
+    <script src="Scripts/snowBack.js"></script>
+
+    <!--internal CSS for this page-->
+    <style>
+        /* style for the main container */
+        #main-container {
+            margin: auto;
+            padding-top: 25vh;
+            width: 100%;
+            font-family: comfort;
+            color: #FEFFFF;
+            font-size: 90px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="binary-snow">
+        <!-- show this message if the browser does not support canvas -->
+        Your browser does not support the HTML canvas tag.
+    </canvas>
+
+    <!--navigation bar div-->
+    <div id="nav-bar">
+        <div class="nav-bar-button nav-active" onclick="location.href='index.html'">HOME</div>
+        <div class="nav-bar-button" onclick="location.href='pages/CV.html'">CV</div>
+        <div class="nav-bar-button" onclick="location.href='pages/projects.html'">PROJECTS</div>
+        <div class="nav-bar-button" onclick="location.href='pages/contact.html'">CONTACT</div>
+    </div>
+
+    <!--main div-->
+    <div id="main-container">
+        <p id="welcome-container" style="cursor: pointer;" onclick="easterEgg()">WELCOME</p>
+    </div>
+
+    <!--footer div for social media links and copyright name-->
+    <div id="footer" style="margin-top: 30vh;">
+        <a href="https://www.github.com/therealyubraj" target="_blank">
+            <img src="content/profiles/github.png" class="social-img">
+        </a>
+
+        <a href="https://www.codingame.com/profile/7f74d384b7e77990fdce282887759f2e6595453" target="_blank">
+            <img src="content/profiles/codingame.svg" class="social-img" style="width: 35px;height: 35px;">
+        </a>
+
+        <a href="https://www.linkedin.com/in/therealyubraj" target="_blank">
+            <img src="content/profiles/linkedin.png" class="social-img">
+        </a>
+        <p style="position:absolute;left:100px;font-family: comfort;color:white">
+            &copy; Yubraj Sharma Dhakal
+        </p>
+
+    </div>
+</body>
+
+</html>

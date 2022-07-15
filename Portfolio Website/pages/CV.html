@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--title of the webpage-->
+    <title>CV</title>
+
+    <!--meta tags for the webpage-->
+    <meta content="CV Page" />
+    <meta name="Name" content="Yubraj Sharma Dhakal" />
+    <meta name="keyword" content="Portfolio" />
+    <meta name="keyword" content="Student" />
+    <meta name="keyword" content="CV Cirriculum Vitae" />
+
+    <!--importing external css for canvas and nav bar-->
+    <link rel="stylesheet" href="../css/canvas.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+
+    <!--importing external javascript for canvas background snow-->
+    <script src="../Scripts/snowBack.js"></script>
+
+    <!--internal CSS for this page-->
+    <style>
+        /* style for all ordered lists */
+        ol {
+            padding-top: 10vh;
+        }
+
+        /* style for the main div */
+        #main-container {
+            margin: auto;
+            font-family: comfort;
+            width: fit-content;
+            height: fit-content;
+            padding: 10vh;
+        }
+
+        /* style for the div containing the tab selector buttons */
+        #selector-box {
+            margin: auto;
+            width: fit-content;
+            align-items: center;
+            display: flex;
+            font-size: 17px;
+        }
+
+        /* style for the tab selection buttons */
+        .selection-button {
+            display: inline-flex;
+            padding: 10px;
+            border: 2px;
+        }
+
+        /*style for the selected button and
+        the hover animation for button selection */
+        .active,
+        .selection-button:hover {
+            transition: all 0.2s ease-in-out;
+            filter: brightness(120%);
+            color: white;
+            border-bottom: 3px solid white;
+            cursor: pointer;
+        }
+
+        /* style for the text container below the  buttons */
+        #content-container {
+            /* makes the height static and makes sure that the footer does not 
+            change positions while tabs are changed up here */
+            height: 40vh;
+        }
+
+        /* style for the final div in the hierarchy */
+        .tab-content {
+            display: none;
+            font-size: 18px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <canvas id="binary-snow">
+        <!-- show this message if the browser does not support canvas -->
+        Your browser does not support the HTML canvas tag.
+    </canvas>
+
+    <!--navigation bar div-->
+    <div id="nav-bar">
+        <div class="nav-bar-button" onclick="location.href='../index.html'">HOME</div>
+        <div class="nav-bar-button nav-active" onclick="location.href='CV.html'">CV</div>
+        <div class="nav-bar-button" onclick="location.href='projects.html'">PROJECTS</div>
+        <div class="nav-bar-button" onclick="location.href='contact.html'">CONTACT</div>
+    </div>
+
+    <!--the main div-->
+    <div id="main-container">
+
+        <!--div containing all the buttons for differnt categories of CV -->
+        <div id="selector-box">
+            <div class="selection-button active" id="EducationButton" onclick="changeTabs('Education')">Education</div>
+            <div class="selection-button" id="AchievementsButton" onclick="changeTabs('Achievements')">Achievements
+            </div>
+            <div class="selection-button" id="ExperienceButton" onclick="changeTabs('Experience')">Experience</div>
+            <div class="selection-button" id="SkillsButton" onclick="changeTabs('Skills')">Skills</div>
+            <div class="selection-button" id="MiscellaneousButton" onclick="changeTabs('Miscellaneous')">Miscellaneous
+            </div>
+        </div>
+
+        <!--content for each category with id as their category name-->
+        <div id="content-container">
+            <!--div for contents of education category-->
+            <div id="Education" class="tab-content" style="display:block;align-items: center;">
+                <!--ordered list for dispalying content-->
+                <ol type="1">
+                    <li> SEE: Newton High School, Baluwatar, Kathmandu </li><br>
+                    <li> +2: Southwestern State College, Basundhara, Kathmandu </li><br>
+                    <li> Bachelors: B.Sc. in Computing, Islington College, Kamalpokhari </li><br>
+                </ol>
+            </div>
+
+            <!--div for contents of Achievements category-->
+            <div id="Achievements" class="tab-content">
+                <ol type="1">
+                    <li> Top-3 placed on 7 robotics exhibitions </li><br>
+                    <li> President of robotics club at Southwestern State College </li><br>
+                </ol>
+            </div>
+
+            <!--div for contents of Experience category-->
+            <div id="Experience" class="tab-content">
+                <ol type="1" type="1">
+                    <li> Taught Arduino programming(C/C++) to club members in +2 </li><br>
+                    <li> Built 2 ASP.NET web applications at Secure IT Solutions </li><br>
+                    <li> Built many functioning robots such as CNC, maze-solver,etc. with Arduino </li><br>
+                </ol>
+            </div>
+
+            <!--div for contents of Skills category-->
+            <div id="Skills" class="tab-content">
+                <ol type="1">
+                    <li> ASP.NET MVC </li><br>
+                    <li> Javascript </li><br>
+                    <li> Java </li><br>
+                    <li> C++ </li><br>
+                    <li> C# </li><br>
+                    <li> Unreal Engine </li><br>
+                </ol>
+            </div>
+
+            <!--div for contents of Miscellaneous category-->
+            <div id="Miscellaneous" class="tab-content">
+                <ol type="1">
+                    <li> Diploma in 3d Animation and VFX: Maya Animation Academy, Jamal, Kathmandu </li><br>
+                    <li> Unreal Engine C++ The Ultimate Game Developer Course: udemy.com </li><br>
+                    <li> Learn C++ for Game Development: udemy.com </li><br>
+                    <li> Master Rank on Codingame.com <br>
+                        Ranked: 2,156th / 376,216 (Global) , 3rd / 558 (Nepal)</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!--footer div for social media links and copyright name-->
+    <div id="footer" style="margin-top: 8vh;">
+        <a href="https://www.github.com/therealyubraj" target="_blank">
+            <img src="../content/profiles/github.png" class="social-img">
+        </a>
+
+        <a href="https://www.codingame.com/profile/7f74d384b7e77990fdce282887759f2e6595453" target="_blank">
+            <img src="../content/profiles/codingame.svg" class="social-img" style="width: 35px;height: 35px;">
+        </a>
+
+        <a href="https://www.linkedin.com/in/therealyubraj" target="_blank">
+            <img src="../content/profiles/linkedin.png" class="social-img">
+        </a>
+        <p style="position:absolute;left:100px;font-family: comfort;color:white">
+            &copy; Yubraj Sharma Dhakal
+        </p>
+
+    </div>
+</body>
+
+<script>
+    //array for storing all ids of differnt tab categories
+    let allTabs = ["Education", "Achievements", "Experience", "Skills", "Miscellaneous"];
+
+    //called when tab buttons are clicked
+    function changeTabs(tabId) {
+        //first make everything invisible
+        allTabs.forEach(curTab => {
+            document.getElementById(curTab).style.display = "none";
+            document.getElementById(curTab + "Button").className = "selection-button";
+        });
+
+        //turn the selected tab and its content visible
+        document.getElementById(tabId + "Button").className += " active";
+        document.getElementById(tabId).style.display = "block";
+    }
+</script>
+
+</html>

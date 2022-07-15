@@ -1,0 +1,3 @@
+- Program wont correctly run on IDLE because of ANSI rendering issues.
+- Setup evnironment variables for python correctly so that command prompt can use python command.
+- Open run_main.bat.

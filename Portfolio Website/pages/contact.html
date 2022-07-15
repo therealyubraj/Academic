@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--title of the webpage-->
+    <title>Contact</title>
+
+    <!--meta tags for the webpage-->
+    <meta content="Contact Page" />
+    <meta name="Name" content="Yubraj Sharma Dhakal" />
+    <meta name="keyword" content="Portfolio" />
+    <meta name="keyword" content="Student" />
+    <meta name="keyword" content="Contact" />
+    <meta name="keyword" content="Feedback" />
+
+    <!--importing external css for canvas and nav bar-->
+    <link rel="stylesheet" href="../css/canvas.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <script src="../Scripts/snowBack.js"></script>
+
+    <!--internal CSS for this page-->
+    <style>
+        /*styles for tags */
+        img {
+            object-fit: cover;
+            max-width: 100%;
+        }
+
+        input {
+            outline: none;
+            border: none;
+            border-bottom: 2px solid white;
+            font-family: comfort;
+            color: white;
+            background-color: transparent;
+            transition: 0.1s ease all;
+            font-size: medium;
+        }
+
+        /* changes to input when input is clicked */
+        input:focus {
+            border: none;
+            outline: none;
+            border-bottom: 2px solid white;
+        }
+
+        /* animate label when cursor is placed on input */
+        input:not(:placeholder-shown)+label,
+        input:focus+label {
+            transform-origin: top left;
+            transform: translateY(-30px) scale(0.7);
+        }
+
+        textarea {
+            border: none;
+            outline: none;
+            margin-top: 5px;
+            font-family: comfort;
+            font-size: 20px;
+            height: 100px;
+            width: 300px;
+            resize: none;
+        }
+
+        /* dont show outline or border when textarea is clicked */
+        textarea:focus {
+            border: none;
+            outline: none;
+        }
+
+        /*style for classes*/
+        .input-container {
+            position: relative;
+            margin-bottom: 80px;
+        }
+
+        .custom-label {
+            position: absolute;
+            pointer-events: none;
+            text-align: center;
+            margin: auto;
+            left: 0%;
+            transition: 0.1s ease all;
+            color: rgb(0, 0, 0);
+        }
+
+        /*style for different ids*/
+        #main-container {
+            margin: auto;
+            margin-top: 80px;
+            margin-left: 300px;
+            margin-bottom: 0px;
+            width: 80%;
+            display: flex;
+            font-family: comfort;
+            font-size: 20px;
+        }
+
+        #left-container {
+            width: 40%;
+            height: 100%;
+            float: left;
+        }
+
+        #right-container {
+            width: 40%;
+        }
+
+
+        #submit-button {
+            border: 2px solid rgba(0, 0, 0, 0.5);
+            color: black;
+            font-size: 20px;
+            background-color: transparent;
+            width: fit-content;
+            display: inline-flex;
+            border-radius: 1px;
+        }
+
+        /*animate submit button on hover*/
+        #submit-button:hover {
+            transform: scale(1.2);
+            transition: all 0.2s ease-in-out;
+            filter: brightness(120%);
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="binary-snow">
+        <!-- show this message if the browser does not support canvas -->
+        Your browser does not support the HTML canvas tag.
+    </canvas>
+
+    <!--navigation bar div-->
+    <div id="nav-bar">
+        <div class="nav-bar-button" onclick="location.href='../index.html'">HOME</div>
+        <div class="nav-bar-button" onclick="location.href='CV.html'">CV</div>
+        <div class="nav-bar-button" onclick="location.href='projects.html'">PROJECTS</div>
+        <div class="nav-bar-button nav-active" onclick="location.href='contact.html'">CONTACT</div>
+    </div>
+
+    <!--the main div-->
+    <div id="main-container">
+        <!--div for the left side which contains an image-->
+        <div id="left-container">
+            <img src="../content/contact/images/mailbox.png" style="padding-top:50px;">
+        </div>
+        <!--div for the right side containing a form-->
+        <div id="right-container">
+            <p style="margin:0;margin-bottom:50px;text-align:center;font-weight: bold;font-size: xx-large;">I would love
+                to hear what you think!</p>
+
+            <!--form-->
+            <form id="contactForm" style="margin:auto;width:60%;" autocomplete="off">
+                <!--input for name-->
+                <div class="input-container">
+                    <input type="text" name="Name" placeholder=" " required>
+                    <label class="custom-label">Full Name*</label>
+                </div>
+
+                <!--input for Email-->
+                <div class="input-container">
+                    <input type="email" name="Email" placeholder=" " required>
+                    <label class="custom-label">Email*</label>
+                </div>
+
+                <!--Radio button for Gender-->
+                <div class="input-container">
+                    Gender*: <input type="radio" name="Gender" value="Male" checked>Male <input type="radio"
+                        name="Gender" value="Female"> Female
+                </div>
+
+                <!--Text Area for Message-->
+                <div class="input-container">
+                    <label>Message*</label><br>
+                    <textarea id="Message" placeholder="" required></textarea>
+                </div>
+
+                <!--submission button-->
+                <div class="input-container">
+                    <input type="submit" id="submit-button" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--footer div for social media links and copyright name-->
+    <div id="footer" style="margin-top: 0vh;">
+        <a href="https://www.github.com/therealyubraj" target="_blank">
+            <img src="../content/profiles/github.png" class="social-img">
+        </a>
+
+        <a href="https://www.codingame.com/profile/7f74d384b7e77990fdce282887759f2e6595453" target="_blank">
+            <img src="../content/profiles/codingame.svg" class="social-img" style="width: 35px;height: 35px;">
+        </a>
+
+        <a href="https://www.linkedin.com/in/therealyubraj" target="_blank">
+            <img src="../content/profiles/linkedin.png" class="social-img">
+        </a>
+        <p style="position:absolute;left:100px;font-family: comfort;color:white">
+            &copy; Yubraj Sharma Dhakal
+        </p>
+
+    </div>
+</body>
+<script>
+    //when contactform is submitted, call validateForm()
+    document.getElementById("contactForm").addEventListener("submit", validateForm);
+
+    function validateForm(event) {
+        //get values from form inputs
+        var nameValue = document.forms["contactForm"]["Name"].value;
+        var emailValue = document.forms["contactForm"]["Email"].value;
+        var genderValue = document.forms["contactForm"]["Gender"].value;
+        var messageValue = document.forms["contactForm"]["Message"].value;
+
+        //prompt for confirming input details
+        let ans = window.prompt("Are these your details? \n Name: " + nameValue + "\n Email: " + emailValue + "\n Gender: " + genderValue + "\n Enter Y/N");
+        //respond to the asnwer
+        if (ans.toUpperCase() == "Y") {
+            window.alert("Your message has been sent!!!"); //alert for success
+        } else {
+            window.alert("Please correct your details first!!");
+            event.preventDefault(); //this line prevents refreshing the page so that inputs can be edited
+        }
+    }
+</script>
+
+</html>

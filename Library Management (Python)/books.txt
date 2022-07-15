@@ -1,0 +1,14 @@
+Book1,Author1,9,1.0
+Book2,Author2,10,2.0
+Book3,Author3,10,13.0
+Book4,Author4,10,14.0
+Book5,Author5,10,11.0
+Book6,Author6,10,12.0
+Book7,Author7,10,5.0
+Book8,Author8,10,9.0
+Book9,Author9,10,7.0
+Book10,Author10,10,6.0
+Book11,Author11,10,4.0
+Book12,Author12,10,6.0
+Book13,Author13,10,3.0
+Book14,Author14,10,3.2

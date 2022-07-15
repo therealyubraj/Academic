@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:steam="http://www.giftstore.com/steam_cards" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.giftstore.com/steam_cards">
+    <xs:import schemaLocation="xhtml5.xsd" namespace="http://www.w3.org/1999/xhtml"/>
+
+    <xs:element name="steam_cards">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="steam:store_logo"/>
+                <xs:element ref="steam:all_cards"/>
+                <xs:element ref="steam:description"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="all_cards">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="steam:phy_cards"></xs:element>
+                <xs:element ref="steam:dig_cards"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="phy_cards">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="steam:phy_card" minOccurs="1" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="dig_cards">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="steam:dig_card" minOccurs="1" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="phy_card">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- <xs:element ref="steam:logo"></xs:element> -->
+                <xs:element ref="steam:amount"/>
+                <xs:element ref="steam:cost"/>
+                <xs:element ref="steam:validity"/>
+                <xs:element ref="steam:num_of_uses"/>
+                <xs:element ref="steam:dimensions" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
+            <xs:attribute ref="steam:phy_id"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="dig_card">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- <xs:element ref="steam:logo"></xs:element> -->
+                <xs:element ref="steam:code"></xs:element>
+                <xs:element ref="steam:amount"/>
+                <xs:element ref="steam:cost"/>
+                <xs:element ref="steam:validity"/>
+                <xs:element ref="steam:num_of_uses"/>
+            </xs:sequence>
+            <xs:attribute ref="steam:dig_id"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="store_logo" type="xs:string" fixed=""/>
+    <xs:element name="amount">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:decimal">
+                    <xs:attribute ref="steam:currency" use="required"/>
+                    <xs:attribute ref="steam:discount" use="optional"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="cost">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:decimal">
+                    <xs:attribute ref="steam:currency" use="required"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="validity" type="xs:string"></xs:element>
+    <xs:element name="num_of_uses" type="xs:positiveInteger"></xs:element>
+    <xs:element name="dimensions">
+        <xs:complexType>
+            <xs:attribute name="w" type="xs:positiveInteger" use="required"/>
+            <xs:attribute name="h" type="xs:positiveInteger" use="required"/>
+            <xs:attribute name="unit" type="steam:length_units" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="code">
+        <xs:simpleType >
+            <xs:restriction base="xs:string">
+                <xs:minLength value="12"></xs:minLength>
+                <xs:maxLength value="12"></xs:maxLength>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="description" type="xs:string"></xs:element>
+
+
+    <xs:attribute name="phy_id" type="xs:ID"></xs:attribute>
+    <xs:attribute name="dig_id" type="xs:ID"></xs:attribute>
+    <xs:attribute name="currency">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="$"/>
+                <xs:enumeration value="Rs."/>
+                <xs:enumeration value="IRs."/>
+                <xs:enumeration value="£"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:simpleType name="length_units">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="cm"></xs:enumeration>
+            <xs:enumeration value="in"></xs:enumeration>
+            <xs:enumeration value="m"></xs:enumeration>
+            <xs:enumeration value="ft"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:attribute name="discount" type="xs:positiveInteger"/>
+
+</xs:schema>
